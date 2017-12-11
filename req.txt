@@ -1,0 +1,33 @@
+// ************ Meadow
+// simulation ends when there is a single colony left
+// 15x15 grid
+// each grid element has a cell which can have a single anthill within
+// [------INIT------]]
+// 4 anthill only
+// Queen randomly selects cell to build her anthill (Builder Pattern)
+//
+
+// ************ Anthill / Cell
+// [[------INIT------]]
+// food = inits with 0 food
+// ants = Array.new max size = 15!
+// hill = nill
+// 5 pieces of food on start
+// if an anthill has 0 foragers it gets destroyed at the end of turn
+// ** Each anthill has its own semi-unique algorithm to decide what should be created next
+// At least 3 different creation strategy
+
+// ************************** Ants
+// moves 1 square each return randomly
+// single room for each ant which costs 1 food and 1 builder ant to create
+
+// [[-----------forager---------------]]
+// food is instantly added to its anthill no hike back
+// experience each time he finds food
+// [[-----------warrior----------------]]
+// if finds a forager 50% he kills the forager
+// warrior also has xp but fight are decided randomly depending on the xp attribute
+// when warrior enters another anthill 1/5 chance that it destroys the anthill => that anthill's all habitants instantly die
+// builder -- creates rooms inside the anthill
+// [[-----------builder----------------]]
+// can create rooms where each room spawns ants every turn there is available food
